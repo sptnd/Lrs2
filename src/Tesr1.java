@@ -11,6 +11,9 @@ public class Tesr1 {
     对象与类
     由类构造对象的过程成为创造类的实例
      */
+    /*
+    日历
+     */
     public static void main(String args[]){
         LocalDate date = LocalDate.now();
         int month = date.getMonthValue();
