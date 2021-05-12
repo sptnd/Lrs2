@@ -13,9 +13,11 @@ public class Employee {
     public关键字意味着任何类的任何方法都可以调用这些方法
     private关键字确保只有Employee类自身的方法能够访问这些实例字段，其他类的方法不能狗读这些字段
      */
+        private static int nextId = 1;
         private String name;
         private double salary;
         private LocalDate hireDay;
+        private int id;
         /*
         1.构造器与类同名
         2.每个类可以有一个以上的构造器
@@ -26,6 +28,7 @@ public class Employee {
         public Employee(String n,double s,int year,int month,int day){//构造器
             name=n;
             salary=s;
+            id = 0;
             hireDay=LocalDate.of(year,month,day);
         }
         /*
@@ -40,6 +43,16 @@ public class Employee {
         }
         public LocalDate getHireDay(){
             return hireDay;
+        }
+        public void setId(){
+            id = nextId;
+            nextId++;
+        }
+        public int getId(){
+            return id;
+        }
+        public static int getNextId(){
+            return nextId;
         }
         /*
         raiseSalary有两个参数  第一个参数为隐式参数是出现在方法名签的Employee类型的对象

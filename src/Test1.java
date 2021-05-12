@@ -6,7 +6,7 @@ import java.time.LocalDate;
  * @email: 337887790@qq.com
  * @date: 2021/5/9 13:28
  */
-public class Tesr1 {
+public class Test1 {
     /*
     对象与类
     由类构造对象的过程成为创造类的实例
